@@ -42,7 +42,7 @@ public class Home_Fragment extends Fragment {
         CarModelList model2 = new CarModelList("Honda Civic 4.5","$ 25,350","4.3",R.drawable.car3);
         CarModelList model3 = new CarModelList("Suzuki Vitara","$ 29,990","4.4",R.drawable.model_suzuki_vitra);
         CarModelList model4 = new CarModelList("Toyota Aquarius","$ 29,600","4.3",R.drawable.model_toyota_aqua);
-        CarModelList model6 = new CarModelList("Mazda6","$ 35,200","4.1",R.drawable.model_toyota_aqua);
+        CarModelList model6 = new CarModelList("Mazda6","$ 35,200","4.1",R.drawable.car1);
         CarModelList model5 = new CarModelList("BMW M2","$ 64,195","4.1",R.drawable.model_bmw);
 
 

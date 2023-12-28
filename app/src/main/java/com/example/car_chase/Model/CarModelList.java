@@ -3,12 +3,21 @@ package com.example.car_chase.Model;
 public class CarModelList {
     private String carName,carPrice,rating;
     private int carImage;
+    private boolean isFavourite;
 
     public CarModelList(String carName, String carPrice,String rating, int carImage) {
         this.carName = carName;
         this.carPrice = carPrice;
         this.rating = rating;
         this.carImage = carImage;
+    }
+
+    public boolean isFavourite() {
+        return isFavourite;
+    }
+
+    public void setFavourite(boolean favourite) {
+        isFavourite = favourite;
     }
 
     public String getCarName() {

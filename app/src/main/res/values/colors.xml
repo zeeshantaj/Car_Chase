@@ -9,4 +9,5 @@
     <color name="ice">#F2F8FB</color>
     <color name="greenish">#304955</color>
     <color name="yellow">#FFEB3B</color>
+    <color name="backBtnColor">#4d5259</color>
 </resources>

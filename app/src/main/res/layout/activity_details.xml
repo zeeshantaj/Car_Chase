@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/introColor"
+    tools:context=".Details.DetailsActivity">
+
+
+            <LinearLayout
+                android:id="@+id/detailBackBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/backBtnColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/left_arrow" />
+            </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailFavouriteImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/backBtnColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/detailBackBtn">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/heart_filled_white" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+        android:text="Car Details"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/detailBackBtn"
+        app:layout_constraintEnd_toStartOf="@+id/detailFavouriteImg"
+        app:layout_constraintStart_toEndOf="@+id/detailBackBtn"
+        app:layout_constraintTop_toTopOf="@+id/detailBackBtn" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/model_mercedes"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/detailBackBtn" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/linear_curve_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Mercedes Benz GLE"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/detailsStart"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/golden_star"
+                app:layout_constraintBottom_toBottomOf="@+id/detailRatingTxt"
+                app:layout_constraintEnd_toStartOf="@+id/detailRatingTxt"
+                app:layout_constraintTop_toTopOf="@+id/detailRatingTxt" />
+
+            <TextView
+                android:id="@+id/detailRatingTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(4.5)"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+
+
+            <TextView
+                android:id="@+id/detailDescriptionTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="The Mercedes-Benz GLE has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 1993 cc while the Petrol engine is 2999 cc . It is available with Automatic transmission.Depending upon the variant and fuel type the GLE has a mileage of . The GLE is a 5 seater 6 cylinder car and has length of 4926, width of 2157 and a wheelbase of 2995."
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:clickable="true"
+                android:letterSpacing="0.1"
+                app:layout_constraintEnd_toEndOf="@+id/detailRatingTxt"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
