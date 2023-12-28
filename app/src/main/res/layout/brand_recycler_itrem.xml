@@ -5,17 +5,34 @@
     android:layout_height="wrap_content"
     android:background="@color/ice">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/brand_img"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+
+    <LinearLayout
+        android:id="@+id/brandLinearLay"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-
-        android:src="@color/greenish"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/introColor"
+        android:orientation="vertical"
+        android:weightSum="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/brand_img"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+
 
     <TextView
         android:id="@+id/brandTitle"
@@ -25,8 +42,8 @@
         android:textColor="@color/grey"
         android:textSize="18sp"
         android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/brand_img"
-        app:layout_constraintStart_toStartOf="@+id/brand_img"
-        app:layout_constraintTop_toBottomOf="@+id/brand_img" />
+        app:layout_constraintEnd_toEndOf="@+id/brandLinearLay"
+        app:layout_constraintStart_toStartOf="@+id/brandLinearLay"
+        app:layout_constraintTop_toBottomOf="@+id/brandLinearLay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

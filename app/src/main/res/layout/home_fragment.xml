@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/ice">
 
@@ -13,7 +13,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/car1"
+        android:src="@drawable/place_holder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,6 +102,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/brandRecycler"
         android:layout_width="0dp"
+        android:layout_marginTop="6dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@+id/searchLinearLay"
         app:layout_constraintStart_toStartOf="@+id/searchLinearLay"
@@ -111,9 +112,11 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="25dp"
         android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/brandRecycler">
@@ -150,8 +153,10 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/modelRecycler"
                 android:layout_width="0dp"
-                android:layout_height="400dp"
+                android:layout_height="300dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textView6"
                 app:layout_constraintStart_toStartOf="@+id/textView5"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -159,6 +164,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
