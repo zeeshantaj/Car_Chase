@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.car_chase.R;
 
-public class Settings extends Fragment {
+public class Settings_Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

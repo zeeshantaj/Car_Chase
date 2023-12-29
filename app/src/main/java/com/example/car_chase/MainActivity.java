@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.example.car_chase.Fragments.Favourite_Fragment;
 import com.example.car_chase.Fragments.Home_Fragment;
+import com.example.car_chase.Fragments.Settings_Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if (id == R.id.navSetting){
-
+                    loadFragment(new Settings_Fragment());
                 }
                 return true;
             }
