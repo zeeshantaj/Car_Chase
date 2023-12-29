@@ -6,6 +6,7 @@
     <color name="introTextColor">#5f6267</color>
     <color name="grey">#95989E</color>
     <color name="searchColor">#BBBBBB</color>
+    <color name="lightGrey">#EAE8E8</color>
     <color name="ice">#F2F8FB</color>
     <color name="greenish">#304955</color>
     <color name="yellow">#FFEB3B</color>
