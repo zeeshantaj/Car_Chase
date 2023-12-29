@@ -2,6 +2,7 @@ package com.example.car_chase.Details;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -9,6 +10,7 @@ import android.text.TextUtils;
 import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,10 +21,35 @@ public class DetailsActivity extends AppCompatActivity {
     private static final int MAX_LINES_COLLAPSED = 2; // Number of lines to show when collapsed
     private boolean isExpanded = false;
 
+    private ImageView carImg;
+    private TextView title,rating,description,price;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
+        price = findViewById(R.id.detailPriceValue);
+        carImg = findViewById(R.id.detailCarImg);
+        title = findViewById(R.id.textView11);
+        rating = findViewById(R.id.detailRatingTxt);
+        TextView textViewContent = findViewById(R.id.detailDescriptionTxt);
+
+
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("title");
+        String pr = intent.getStringExtra("price");
+        String rt = intent.getStringExtra("rating");
+        String des = intent.getStringExtra("description");
+        int img = intent.getIntExtra("carImg",0);
+
+        title.setText(name);
+        price.setText(pr);
+        textViewContent.setText(des);
+        rating.setText(rt);
+        title.setText(name);
+        carImg.setImageResource(img);
 
         LinearLayout backBtn = findViewById(R.id.detailBackBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +61,6 @@ public class DetailsActivity extends AppCompatActivity {
 
 
 
-        final TextView textViewContent = findViewById(R.id.detailDescriptionTxt);
 
         textViewContent.post(() -> {
             if (textViewContent.getLineCount() > MAX_LINES_COLLAPSED) {

@@ -1,23 +1,17 @@
 package com.example.car_chase.Model;
 
 public class CarModelList {
-    private String carName,carPrice,rating;
+    private String carName,carPrice,rating,details;
     private int carImage;
     private boolean isFavourite;
 
-    public CarModelList(String carName, String carPrice,String rating, int carImage) {
+
+    public CarModelList(String carName, String carPrice, String rating, String details, int carImage) {
         this.carName = carName;
         this.carPrice = carPrice;
         this.rating = rating;
+        this.details = details;
         this.carImage = carImage;
-    }
-
-    public boolean isFavourite() {
-        return isFavourite;
-    }
-
-    public void setFavourite(boolean favourite) {
-        isFavourite = favourite;
     }
 
     public String getCarName() {
@@ -44,11 +38,27 @@ public class CarModelList {
         this.rating = rating;
     }
 
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
+    }
+
     public int getCarImage() {
         return carImage;
     }
 
     public void setCarImage(int carImage) {
         this.carImage = carImage;
+    }
+
+    public boolean isFavourite() {
+        return isFavourite;
+    }
+
+    public void setFavourite(boolean favourite) {
+        isFavourite = favourite;
     }
 }

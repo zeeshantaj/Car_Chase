@@ -52,6 +52,13 @@ public class CarModelAdapter extends RecyclerView.Adapter<CarModelAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), DetailsActivity.class);
+                intent.putExtra("title",carModel.getCarName());
+                intent.putExtra("price",carModel.getCarPrice());
+                intent.putExtra("description",carModel.getDetails());
+                intent.putExtra("rating",carModel.getRating());
+                intent.putExtra("carImg",carModel.getCarImage());
+
+
                 v.getContext().startActivity(intent);
             }
         });

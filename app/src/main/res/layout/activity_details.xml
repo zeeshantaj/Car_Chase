@@ -60,6 +60,7 @@
         app:layout_constraintTop_toTopOf="@+id/detailBackBtn" />
 
     <ImageView
+        android:id="@+id/detailCarImg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:src="@drawable/model_mercedes"
@@ -69,70 +70,295 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
         android:background="@drawable/linear_curve_bg"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <ScrollView
+                android:id="@+id/detailScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Mercedes Benz GLE"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/detailsStart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/golden_star"
+                        app:layout_constraintBottom_toBottomOf="@+id/detailRatingTxt"
+                        app:layout_constraintEnd_toStartOf="@+id/detailRatingTxt"
+                        app:layout_constraintTop_toTopOf="@+id/detailRatingTxt" />
+
+                    <TextView
+                        android:id="@+id/detailRatingTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(4.5)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+
+
+                    <TextView
+                        android:id="@+id/detailDescriptionTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/grey"
+                        android:textSize="14sp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:clickable="true"
+                        android:letterSpacing="0.1"
+                        app:layout_constraintEnd_toEndOf="@+id/detailRatingTxt"
+                        app:layout_constraintStart_toStartOf="@+id/textView11"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                    <TextView
+                        android:id="@+id/featureTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Features"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/detailDescriptionTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/detailDescriptionTxt" />
+
+                    <LinearLayout
+                        android:id="@+id/gridLinearLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        app:layout_constraintEnd_toEndOf="@+id/detailDescriptionTxt"
+                        app:layout_constraintStart_toStartOf="@+id/featureTxt"
+                        app:layout_constraintTop_toBottomOf="@id/featureTxt">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            android:elevation="0dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/ice">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/circle"
+                                    android:backgroundTint="@color/white"
+                                    android:src="@drawable/seat_icon"
+                                    android:padding="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="10dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total\ncapacity"
+                                    android:textColor="@color/grey"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:id="@+id/seatTxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="6 Seats"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="7dp"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            android:elevation="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            app:cardBackgroundColor="@color/ice">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/circle"
+                                    android:backgroundTint="@color/white"
+                                    android:src="@drawable/steering_icon"
+                                    android:padding="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="10dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Highers\nSpeed"
+                                    android:textColor="@color/grey"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:id="@+id/KMHTxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="200 KM/H"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="7dp"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            android:elevation="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            app:cardBackgroundColor="@color/ice">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/circle"
+                                    android:backgroundTint="@color/white"
+                                    android:src="@drawable/engine_icon"
+                                    android:padding="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="10dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Engine\nOutput"
+                                    android:textColor="@color/grey"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:id="@+id/HpTxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="500 HP"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="7dp"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/priceTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:text="Price"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:layout_marginTop="20dp"
-                android:text="Mercedes Benz GLE"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/detailPriceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$45,590"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxEms="7"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_alignStart="@id/priceTxt"
+                android:layout_below="@id/priceTxt"/>
 
-            <ImageView
-                android:id="@+id/detailsStart"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/golden_star"
-                app:layout_constraintBottom_toBottomOf="@+id/detailRatingTxt"
-                app:layout_constraintEnd_toStartOf="@+id/detailRatingTxt"
-                app:layout_constraintTop_toTopOf="@+id/detailRatingTxt" />
-
-            <TextView
-                android:id="@+id/detailRatingTxt"
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(4.5)"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginEnd="10dp"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/textView11"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView11" />
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/introColor"
+                android:text="Buy now"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_alignTop="@id/priceTxt"
+                android:layout_alignBottom="@id/detailPriceValue"
+                android:layout_toEndOf="@id/detailPriceValue"/>
+        </RelativeLayout>
 
-
-
-            <TextView
-                android:id="@+id/detailDescriptionTxt"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="The Mercedes-Benz GLE has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 1993 cc while the Petrol engine is 2999 cc . It is available with Automatic transmission.Depending upon the variant and fuel type the GLE has a mileage of . The GLE is a 5 seater 6 cylinder car and has length of 4926, width of 2157 and a wheelbase of 2995."
-                android:textColor="@color/grey"
-                android:textSize="14sp"
-                android:padding="10dp"
-                android:maxLines="2"
-                android:ellipsize="end"
-                android:clickable="true"
-                android:letterSpacing="0.1"
-                app:layout_constraintEnd_toEndOf="@+id/detailRatingTxt"
-                app:layout_constraintStart_toStartOf="@+id/textView11"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>
