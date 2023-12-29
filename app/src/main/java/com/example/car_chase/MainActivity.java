@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.example.car_chase.Fragments.Favourite_Fragment;
 import com.example.car_chase.Fragments.Home_Fragment;
+import com.example.car_chase.Fragments.Profile_Fragment;
 import com.example.car_chase.Fragments.Settings_Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 else if (id == R.id.navHeart){
                     loadFragment(new Favourite_Fragment());
                 }
-                else if (id == R.id.navBag){
-
+                else if (id == R.id.navProfile){
+                    loadFragment(new Profile_Fragment());
                 }
                 else if (id == R.id.navSetting){
                     loadFragment(new Settings_Fragment());

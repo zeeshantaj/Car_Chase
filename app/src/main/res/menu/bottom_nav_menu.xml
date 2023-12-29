@@ -15,9 +15,9 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/navBag"
-        android:icon="@drawable/bag"
-        android:title="Bag"
+        android:id="@+id/navProfile"
+        android:icon="@drawable/person_icon"
+        android:title="profile"
         app:showAsAction="always" />
 
     <item
